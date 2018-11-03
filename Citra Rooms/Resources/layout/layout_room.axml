@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center">
+	<ImageView
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:id="@+id/gameImage"
+		android:layout_margin="16dp" 
+	/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:id="@+id/centerLayout">
+		<TextView
+			android:text="A Room"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/roomLabel"
+			android:textSize="7pt"
+			android:layout_margin="2dp"
+			android:textColor="@android:color/white"
+			android:singleLine="true"/>
+		<TextView
+			android:text="A Game"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/gameLabel"
+			android:textSize="7pt"
+			android:textColor="@android:color/white"
+			android:singleLine="true"
+			android:layout_margin="1dp"/>
+		<TextView
+			android:text="An user"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/ownerLabel"
+			android:layout_margin="1dp"
+			android:textSize="5pt"
+			android:textColor="@android:color/white"
+			android:singleLine="true" />
+	</LinearLayout>
+	<TextView
+		android:text="0/0"
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:id="@+id/playersCounter"
+		android:layout_margin="8dp"
+		android:gravity="center"
+		android:textColor="@android:color/white"/>
+	<ImageButton
+		android:src="@drawable/ic_info_outline_white"
+		android:layout_width="24dp"
+		android:layout_height="fill_parent"
+		android:layout_margin="8dp"
+		android:id="@+id/infoPlayers"
+		android:background="@android:color/transparent"
+		android:scaleType="fitCenter"
+	/>
+	<ImageButton
+		android:src="@drawable/ic_exit_to_app_white"
+		android:layout_width="42dp"
+		android:layout_height="fill_parent"
+		android:id="@+id/enterRoom"
+		android:background="@android:color/transparent"
+		android:scaleType="fitCenter"
+		android:padding="8dp"
+		android:layout_marginRight="8dp" 
+	/>
+	
+
+</LinearLayout>

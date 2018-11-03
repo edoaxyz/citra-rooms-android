@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:fillViewport="true"
+		android:id="@+id/scrollMessages">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/messages">
+			<LinearLayout
+				android:orientation="vertical"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/connectingLayout"
+				android:gravity="center">
+				<ProgressBar
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:text="Connecting..."
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<EditText
+				android:inputType="textMultiLine|textCapWords"
+				android:layout_width="match_parent"
+				android:layout_height="54dp"
+				android:id="@+id/message"
+				android:background="#ff424242"
+				android:hint="Type here..."
+				android:paddingRight="64dp"
+				android:maxHeight="48dp"
+				android:layout_marginTop="20px"
+				android:paddingBottom="8dp"
+				android:paddingLeft="8dp"
+				android:paddingTop="4dp" />
+		</LinearLayout>
+		<ImageButton
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:background="@drawable/shape_circle"
+			android:src="@drawable/ic_send_white_48dp"
+			android:padding="12dp"
+			android:scaleType="fitCenter"
+			android:elevation="10dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="8dp"
+			android:id="@+id/sendMessageButton" />
+	</RelativeLayout>
+
+</LinearLayout>

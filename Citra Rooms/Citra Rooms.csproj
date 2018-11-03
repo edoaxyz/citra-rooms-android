@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69843DD0-F7EC-4622-9A03-DDF5508E959C}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CitraRooms</RootNamespace>
+    <AssemblyName>Citra Rooms</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>portable</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>portable</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ENet">
+      <HintPath>..\..\..\..\Desktop\provaenet\bin\ENet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\CustomViews\Chat\Chat.cs" />
+    <Compile Include="src\CustomViews\General.cs" />
+    <Compile Include="src\Main\LobbyUpdater.cs" />
+    <Compile Include="src\Main\MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Rooms\RoomActivity.cs" />
+    <Compile Include="src\Rooms\RoomListener.cs" />
+    <Compile Include="src\Settings\SettingsActivity.cs" />
+    <Compile Include="src\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="Assets\libs\arm64-v8a\libenet.so" />
+    <AndroidNativeLibrary Include="Assets\libs\armeabi-v7a\libenet.so" />
+    <AndroidNativeLibrary Include="Assets\libs\x86\libenet.so" />
+    <AndroidNativeLibrary Include="Assets\libs\x86_64\libenet.so" />
+    <AndroidAsset Include="Assets\games.json" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Be.IO-netstandard">
+      <Version>1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_room.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_info_outline_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_exit_to_app_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_citra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\players_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_player.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_settings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_room.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_circle.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_send_white_48dp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_message.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_rect_round_corner.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_room.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_chat_alert.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_settings_white_24dp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_sent_message.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\values\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\raw\sound_in.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_2048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_3d-ecco-the-dolphin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_3d-kirbys-adventure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_7th-dragon-iii-code-vfd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_adventure-labyrinth-story.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_animal-crossing-happy-home-designer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_animal-crossing-new-leaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_azure-striker-gunvolt-striker-pack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_boxboy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_bravely-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_bravely-second-end-layer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_captain-toad-treasure-tracker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_cardfight-vanguard-ride-to-victory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_castlevania-lords-of-shadow-mirror-of-fate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_cave-story-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_code-of-princess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_corpse-party.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_cubit-the-hardcore-platformer-robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dead-or-alive-dimensions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dededes-drum-dash-deluxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_detective-pikachu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_digimon-world-re-digitize-decode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dr-mario-miracle-cure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-ball-fusions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-ball-z-extreme-butoden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-quest-monsters-joker-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-quest-vii-fragments-of-the-forgotten-past.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-quest-viii-journey-of-the-cursed-king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_etrian-mystery-dungeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_etrian-odyssey-v-beyond-the-myth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_ever-oasis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fantasy-life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_final-fantasy-explorers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fire-emblem-awakening.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fire-emblem-echoes-shadows-of-valentia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fire-emblem-fates-special-edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_harvest-moon-3d-the-tale-of-two-towns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_hatsune-miku-project-mirai-dx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_health-and-safety-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_heroes-of-ruin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_hey-pikmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_inazuma-eleven-3-lightning-bolt-bomb-blast-and-team-ogre-attacks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_inazuma-eleven-go-chrono-stones-wildfire-and-thunderflash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_inazuma-eleven-go-galaxy-3-big-bang-and-supernova.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_inazuma-eleven-go-light-and-shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kingdom-hearts-3d-dream-drop-distance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kirby-battle-royale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kirby-fighters-deluxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kirby-planet-robobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kirby-triple-deluxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kirbys-blowout-blast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_langrisser-re-incarnation-tensei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_laytons-mystery-journey-katrielle-and-the-millionaires-conspiracy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-dark-witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-zelda-a-link-between-worlds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-zelda-majoras-mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-zelda-ocarina-of-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-zelda-tri-force-heroes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_lord-of-magna-maiden-heaven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_luigi-mansion-dark-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-kart-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-luigi-dream-team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-luigi-paper-jam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-luigi-superstar-saga-bowsers-minions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-party-island-tour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-party-the-top-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-sonic-at-the-london-2012-olympic-games.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-sonic-at-the-rio-2016-olympic-games.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_megaman-legacy-collection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_metal-gear-solid-snake-eater-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_metroid-prime-blast-ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_metroid-prime-federation-force.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_metroid-samus-returns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mii-maker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_miitopia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_monster-hunter-3-ultimate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_monster-hunter-4-ultimate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_monster-hunter-generations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_monster-hunter-stories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_my-nintendo-picross-twilight-princess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_new-super-mario-bros-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pac-man-and-galaga-dimensions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_paper-mario-sticker-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_parascientific-escape-crossing-at-the-farthest-horizon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_parascientific-escape-cruise-in-the-distant-seas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_parascientific-escape-gear-detective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_persona-q-shadow-of-the-labyrinth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_phoenix-wright-ace-attorney-dual-destinies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_phoenix-wright-ace-attorney-spirit-of-justice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_phoenix-wright-ace-attorney-trilogy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pilotwings-resort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-art-academy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-mystery-dungeon-gates-to-infinity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-omega-ruby-alpha-sapphire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-sun-and-moon-special-demo-version.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-sun-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-super-mystery-dungeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-ultra-sun-ultra-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_poochy-yoshis-woolly-world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_professor-layton-and-the-azran-legacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_professor-layton-and-the-miracle-mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_professor-layton-vs-phoenix-wright-ace-attorney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_project-x-zone-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_project-x-zone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_puyo-puyo-chronicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_puyo-puyo-tetris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_radiant-historia-perfect-chronology.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rayman-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_resident-evil-revelations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rune-factory-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rustys-real-deal-baseball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_scribblenauts-unlimited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_senran-kagura-burst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shantae-and-the-pirates-curse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shin-megami-tensei-devil-summoner-soul-hackers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shin-megami-tensei-devil-survivor-2-record-breaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shin-megami-tensei-iv-apocalypse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shin-megami-tensei-iv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shin-megami-tensei-strange-journey-redux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_shovel-knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_sonic-generations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_sonic-lost-world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_star-fox-64-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_steamworld-dig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_stella-glow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_story-of-seasons-trio-of-towns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_story-of-seasons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-mario-3d-land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-mario-bros-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-monkey-ball-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-pokemon-rumble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-robot-wars-ux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-smash-bros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-street-fighter-4-3d-edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_the-alliance-alive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_xeodrifter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yo-kai-watch-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yo-kai-watch-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yo-kai-watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yoshis-new-island.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yu-gi-oh-duel-monsters-saikyo-card-battle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_zero-escape-virtues-last-reward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_zero-time-dilemma.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

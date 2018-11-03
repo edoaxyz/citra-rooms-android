@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#424242"
+	android:layout_margin="16dp" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+		<ImageView
+			android:src="@android:drawable/ic_menu_gallery"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:id="@+id/dialog_gameImage"
+			android:layout_margin="16dp" 
+		/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:text="A Room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_roomLabel"
+                android:textSize="7pt"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/white"
+                android:singleLine="true"/>
+            <TextView
+                android:text="A Game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_gameLabel"
+                android:textSize="7pt"
+                android:textColor="@android:color/white"
+                android:singleLine="true"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="An user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_ownerLabel"
+                android:layout_margin="1dp"
+                android:textSize="5pt"
+                android:textColor="@android:color/white"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			android:text="Players"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/white"
+			android:singleLine="true"
+			android:layout_margin="14dp"
+			android:textSize="11pt"/>
+		<TextView
+			android:text="0/0"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/white"
+			android:singleLine="true"
+			android:layout_margin="14dp"
+			android:textSize="11pt"
+			android:textAlignment="textEnd"
+			android:id="@+id/dialog_playerCounter" />
+	</LinearLayout>
+	<ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent" >
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/playersList">
+		</LinearLayout>
+	</ScrollView>
+
+	
+</LinearLayout>
