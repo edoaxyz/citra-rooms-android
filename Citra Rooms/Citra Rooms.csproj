@@ -255,10 +255,22 @@
     <AndroidAsset Include="Assets\game_3d-kirbys-adventure.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_61unlimited.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_7th-dragon-iii-code-vfd.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_adventure-labyrinth-story.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_adventure-time-hey-ice-king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_aero-porter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_aikatsu-365-idol-days.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_animal-crossing-happy-home-designer.png" />
@@ -267,16 +279,40 @@
     <AndroidAsset Include="Assets\game_animal-crossing-new-leaf.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_asphalt-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_attack-of-the-friday-monsters-a-tokyo-tale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_attack-on-titan-humanity-in-chains.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_azure-striker-gunvolt-striker-pack.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_batman-arkham-origins-blackgate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_bike-rider-dx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_bloody-vampire.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_boxboy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_brain-age-concentration-training.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_bravely-default.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_bravely-second-end-layer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_bust-a-move-universe.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_captain-toad-treasure-tracker.png" />
@@ -291,6 +327,9 @@
     <AndroidAsset Include="Assets\game_cave-story-3d.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_cn-punch-time-explosion.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_code-of-princess.png" />
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +337,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_cubit-the-hardcore-platformer-robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_culdcept-revolt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_dai-gyakuten-saiban-naruhodou-ryuunosuke-no-bouken.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_dead-or-alive-dimensions.png" />
@@ -312,6 +357,9 @@
     <AndroidAsset Include="Assets\game_digimon-world-re-digitize-decode.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_dillons-dead-heat-breakers.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_dr-mario-miracle-cure.png" />
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +372,9 @@
     <AndroidAsset Include="Assets\game_dragon-quest-monsters-joker-3.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_dragon-quest-monsters-terry-no-wonderland-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_dragon-quest-vii-fragments-of-the-forgotten-past.png" />
   </ItemGroup>
   <ItemGroup>
@@ -333,10 +384,28 @@
     <AndroidAsset Include="Assets\game_etrian-mystery-dungeon.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_etrian-odyssey-2-untold-the-fafnir-knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_etrian-odyssey-iv-legends-of-the-titan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_etrian-odyssey-untold-the-millennium-girl.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_etrian-odyssey-v-beyond-the-myth.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_ever-oasis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fairune-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fairune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_fallblox.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_fantasy-life.png" />
@@ -354,7 +423,16 @@
     <AndroidAsset Include="Assets\game_fire-emblem-fates-special-edition.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_harmoknight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_harvest-moon-3d-a-new-beginning.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_harvest-moon-3d-the-tale-of-two-towns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_hatsune-miku-and-future-stars-project-mirai.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_hatsune-miku-project-mirai-dx.png" />
@@ -369,6 +447,9 @@
     <AndroidAsset Include="Assets\game_hey-pikmin.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_hyrule-warriors-legends.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_inazuma-eleven-3-lightning-bolt-bomb-blast-and-team-ogre-attacks.png" />
   </ItemGroup>
   <ItemGroup>
@@ -379,6 +460,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_inazuma-eleven-go-light-and-shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_kid-icarus-uprising.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_kingdom-hearts-3d-dream-drop-distance.png" />
@@ -405,7 +489,13 @@
     <AndroidAsset Include="Assets\game_laytons-mystery-journey-katrielle-and-the-millionaires-conspiracy.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-dark-witch-2-the-price-of-desire.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_legend-of-dark-witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_legend-of-legacy.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_legend-of-zelda-a-link-between-worlds.png" />
@@ -420,10 +510,16 @@
     <AndroidAsset Include="Assets\game_legend-of-zelda-tri-force-heroes.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\game_lord-of-magna-maiden-heaven.png" />
+    <AndroidAsset Include="Assets\game_lego-city-undercover-the-chase-begins.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_luigi-mansion-dark-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_luigis-mansion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-and-donkey-kong-minis-on-the-move.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_mario-kart-7.png" />
@@ -441,6 +537,9 @@
     <AndroidAsset Include="Assets\game_mario-party-island-tour.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-party-star-rush.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_mario-party-the-top-100.png" />
   </ItemGroup>
   <ItemGroup>
@@ -450,10 +549,19 @@
     <AndroidAsset Include="Assets\game_mario-sonic-at-the-rio-2016-olympic-games.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-sports-superstars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_mario-vs-donkey-kong-tipping-stars.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_megaman-legacy-collection.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_metal-gear-solid-snake-eater-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_metroid-ii-return-of-samus.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_metroid-prime-blast-ball.png" />
@@ -471,6 +579,9 @@
     <AndroidAsset Include="Assets\game_miitopia.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_mini-mario-friends-amiibo-challenge.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_monster-hunter-3-ultimate.png" />
   </ItemGroup>
   <ItemGroup>
@@ -483,10 +594,28 @@
     <AndroidAsset Include="Assets\game_monster-hunter-stories.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_mutant-mudds.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_my-nintendo-picross-twilight-princess.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_naruto-powerful-shippuden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_naruto-shippuden-3d-the-new-era.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_new-loveplus.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_new-super-mario-bros-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_nikolis-pencil-puzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_one-piece-unlimited-world-red.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_pac-man-and-galaga-dimensions.png" />
@@ -516,19 +645,58 @@
     <AndroidAsset Include="Assets\game_phoenix-wright-ace-attorney-trilogy.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-3d-round-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_picross-e6.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_picross-e8.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_pilotwings-resort.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_pocket-card-jockey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-alpha-sapphire.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_pokemon-art-academy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-battle-trozei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-moon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_pokemon-mystery-dungeon-gates-to-infinity.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\game_pokemon-omega-ruby-alpha-sapphire.png" />
+    <AndroidAsset Include="Assets\game_pokemon-omega-ruby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-picross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-rumble-world.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_pokemon-shuffle.png" />
@@ -537,13 +705,25 @@
     <AndroidAsset Include="Assets\game_pokemon-sun-and-moon-special-demo-version.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\game_pokemon-sun-moon.png" />
+    <AndroidAsset Include="Assets\game_pokemon-sun.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_pokemon-super-mystery-dungeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\game_pokemon-ultra-sun-ultra-moon.png" />
+    <AndroidAsset Include="Assets\game_pokemon-ultra-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-ultra-sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_pokemon-yellow.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_poochy-yoshis-woolly-world.png" />
@@ -576,7 +756,22 @@
     <AndroidAsset Include="Assets\game_rayman-3d.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_regular-show-mordecai-and-rigby-in-8-bit-land.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_resident-evil-revelations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_resident-evil-the-mercenaries-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rhythm-heaven-megamix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rhythm-thief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_rpg-maker-fes.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_rune-factory-4.png" />
@@ -585,7 +780,13 @@
     <AndroidAsset Include="Assets\game_rustys-real-deal-baseball.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_sanrio-characters-picross.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_scribblenauts-unlimited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_sega-3d-classics-collection.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_senran-kagura-burst.png" />
@@ -612,10 +813,16 @@
     <AndroidAsset Include="Assets\game_shovel-knight.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_smilebasic.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_sonic-generations.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_sonic-lost-world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_spongebob-squigglepants.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_star-fox-64-3d.png" />
@@ -633,10 +840,16 @@
     <AndroidAsset Include="Assets\game_story-of-seasons.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_sudoku-by-nikoli.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_super-mario-3d-land.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_super-mario-bros-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_super-mario-maker-for-nintendo-3ds.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_super-monkey-ball-3d.png" />
@@ -654,7 +867,46 @@
     <AndroidAsset Include="Assets\game_super-street-fighter-4-3d-edition.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\game_taiko-no-tatsujin-don-to-katsu-no-jiku-daiboken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_tales-of-the-abyss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_terraria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_tetris-axis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_tetris-ultimate.png" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\game_the-alliance-alive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_the-denpa-men-they-came-by-wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_the-sims-3-pets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_the-sims-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_theatrhythm-dragon-quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_tomodachi-life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_ttf-curtain-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_ultimate-nes-remix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_warioware-gold.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_xeodrifter.png" />
@@ -664,6 +916,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_yo-kai-watch-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\game_yo-kai-watch-blasters.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\game_yo-kai-watch.png" />

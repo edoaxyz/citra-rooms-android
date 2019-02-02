@@ -25,7 +25,7 @@ namespace CitraRooms.CustomViews.Chat
         private void SetUI()
         {
             TextView label;
-            if (msg.Username == null)
+            if (msg.Nickname == null)
             {
                 View v = Inflate(Context, Resource.Layout.layout_sent_message, this);
                 this.SetGravity(GravityFlags.Right);
@@ -35,7 +35,7 @@ namespace CitraRooms.CustomViews.Chat
                 Inflate(Context, Resource.Layout.layout_message, this);
 
                 label = (TextView)FindViewById(Resource.Id.usernameMessage);
-                label.Text = msg.Username;
+                label.Text = msg.Nickname;
                 label.SetTextColor(this.usernameColor);
             }
 
@@ -50,13 +50,11 @@ namespace CitraRooms.CustomViews.Chat
 
     class ChatAlertView : LinearLayout
     {
-        public String message;
-        public DateTime timeStamp;
+        public StatusMessage message;
 
-        public ChatAlertView(Context context, String message) : base(context)
+        public ChatAlertView(Context context, StatusMessage message) : base(context)
         {
             this.message = message;
-            this.timeStamp = DateTime.Now;
 
             SetUI();
         }
@@ -67,11 +65,31 @@ namespace CitraRooms.CustomViews.Chat
             Inflate(Context, Resource.Layout.layout_chat_alert, this);
             this.SetGravity(GravityFlags.Center);
 
+            String text = message.Nickname;
+            switch (message.Type)
+            {
+                case StatusMessageTypes.IdMemberJoin:
+                    text += " joined room";
+                    break;
+                case StatusMessageTypes.IdMemberLeave:
+                    text += " leaved room";
+                    break;
+                case StatusMessageTypes.IdMemberKicked:
+                    text += " kicked from room";
+                    break;
+                case StatusMessageTypes.IdMemberBanned:
+                    text += " banned from room";
+                    break;
+                case StatusMessageTypes.IdAddressUnbanned:
+                    text += " unbanned from room";
+                    break;
+            }
+
             TextView label = (TextView)FindViewById(Resource.Id.messageAlert);
-            label.Text = message;
+            label.Text = text;
 
             label = (TextView)FindViewById(Resource.Id.timeAlert);
-            label.Text = timeStamp.ToShortTimeString();
+            label.Text = message.TimeStamp.ToShortTimeString();
         }
     }
 }

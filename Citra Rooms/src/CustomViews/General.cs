@@ -127,7 +127,7 @@ namespace CitraRooms.CustomViews
         {
             Inflate(Context, Resource.Layout.layout_player, this);
             TextView label = (TextView)FindViewById(Resource.Id.playerName);
-            label.Text = player.name;
+            label.Text = player.nickname;
             label = (TextView)FindViewById(Resource.Id.playerGame);
             label.Text = player.gameName;
             

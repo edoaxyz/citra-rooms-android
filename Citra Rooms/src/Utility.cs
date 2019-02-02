@@ -34,6 +34,13 @@ namespace CitraRooms
             return name;
         }
 
+        public static byte[] GetRandomU64()
+        {
+            byte[] code = new byte[8];
+            Random rnd = new Random();
+            rnd.NextBytes(code);
+            return code;
+        }
         
         public static Bitmap RoundImage(Bitmap source, Bitmap overlay)
         {

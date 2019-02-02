@@ -52,6 +52,7 @@ namespace CitraRooms.Rooms
             listener.OnRoomUpdate += UpdateInfoRoom;
             listener.OnConnect += Connected;
             listener.OnMessageReceived += AddMessage;
+            listener.OnStatusReceived += AddStatusMessage;
 
             ((ImageButton)FindViewById(Resource.Id.sendMessageButton)).Click += SendMessage;
 
@@ -169,20 +170,11 @@ namespace CitraRooms.Rooms
             {
                 foreach (Player p in room.players)
                 {
-                    if (!this.room.players.Contains(p))
-                    {
-                        SetUpColor(p);
-
-                        RunOnUiThread(() => messageContainer.AddView(new ChatAlertView(this, p.name + " joined room")));
-                    }
+                    if (!this.room.players.Contains(p)) SetUpColor(p);
                 }
                 foreach (Player p in this.room.players)
                 {
-                    if (!room.players.Contains(p))
-                    {
-                        RemoveColor(p);
-                        RunOnUiThread(() => messageContainer.AddView(new ChatAlertView(this, p.name + " left room")));
-                    }
+                    if (!room.players.Contains(p)) RemoveColor(p);
                 }
             }
             this.room = room;
@@ -192,17 +184,23 @@ namespace CitraRooms.Rooms
         {
             RunOnUiThread(() => {
                 messageContainer.RemoveView(FindViewById(Resource.Id.connectingLayout));
-                messageContainer.AddView(new ChatAlertView(this, "Connected"));
             });
         }
 
         private void AddMessage(object sender, ChatMessage msg)
         {
             RunOnUiThread(() => {
-                messageContainer.AddView(new ChatMessageView(this, msg, this.colors[msg.Username]));
+                messageContainer.AddView(new ChatMessageView(this, msg, this.colors[msg.Nickname]));
                 newMessage.Start();
             });
             
+        }
+
+        private void AddStatusMessage(object sender, StatusMessage msg)
+        {
+            RunOnUiThread(() => {
+                messageContainer.AddView(new ChatAlertView(this, msg));
+            });
         }
 
         private void SendMessage(object sender, EventArgs e)
@@ -234,15 +232,15 @@ namespace CitraRooms.Rooms
             Random r = new Random();
             Color[] colors = unusedColors.ToArray();
             Color choosedColor = colors[r.Next(colors.Length)];
-            this.colors[p.name] = choosedColor;
+            this.colors[p.nickname] = choosedColor;
             unusedColors.Remove(choosedColor);
             return choosedColor;
         }
 
         private void RemoveColor(Player p)
         {
-            Color c = this.colors[p.name];
-            this.colors.Remove(p.name);
+            Color c = this.colors[p.nickname];
+            this.colors.Remove(p.nickname);
             unusedColors.Add(c);
         }
 

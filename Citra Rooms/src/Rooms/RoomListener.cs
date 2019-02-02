@@ -72,7 +72,7 @@ namespace CitraRooms.Rooms
         Disconnected
     }
 
-    enum MessageTypes : byte
+    enum RoomMessageTypes : byte
     {
         IdJoinRequest = 0x01,
         IdJoinSuccess,
@@ -84,32 +84,62 @@ namespace CitraRooms.Rooms
         IdMacCollision,
         IdVersionMismatch,
         IdWrongPassword,
-        IdCloseRoom
+        IdCloseRoom,
+        IdRoomIsFull,
+        IdConsoleIdCollision,
+        IdStatusMessage,
+        IdHostKicked,
+        IdHostBanned,
+        IdModKick,
+        IdModBan,
+        IdModUnban,
+        IdModGetBanList,
+        IdModBanListResponse,
+        IdModPermissionDenied,
+        IdModNoSuchUser,
+        IdJoinSuccessAsMod,
+    };
+
+    enum StatusMessageTypes : byte
+    {
+        IdMemberJoin = 1,
+        IdMemberLeave,
+        IdMemberKicked,
+        IdMemberBanned,
+        IdAddressUnbanned,
     };
 
     struct LoginData
     {
-        public readonly string Username;
+        public readonly string Nickname;
         public readonly string Password;
 
-        public LoginData(string username, string password)
+        public LoginData(string nickname, string password)
         {
-            Username = username;
+            Nickname = nickname;
             Password = password;
         }
     }
 
     struct ChatMessage
     {
+        public string Nickname;
         public string Username;
         public string Message;
         public DateTime TimeStamp;
     }
     
+    struct StatusMessage
+    {
+        public StatusMessageTypes Type;
+        public string Nickname;
+        public string Username;
+        public DateTime TimeStamp;
+    }
 
     class RoomListener
     {
-        private const byte netVersion = 0x03;
+        private const byte netVersion = 0x04;
 
         private Host client;
         private Peer server;
@@ -119,6 +149,7 @@ namespace CitraRooms.Rooms
         public event EventHandler<Room> OnRoomUpdate;
         public event EventHandler OnConnect;
         public event EventHandler<ChatMessage> OnMessageReceived;
+        public event EventHandler<StatusMessage> OnStatusReceived;
 
         public RoomListener(String address, int port, String username, String password)
         {
@@ -136,16 +167,19 @@ namespace CitraRooms.Rooms
         private void TryConnect(int netVersion, Event @event)
         {
             byte[] MAC = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+            byte[] consoleID = Utility.GetRandomU64();
 
             using (MemoryStream ms = new MemoryStream())
             {
                 using (CustomBinaryWriter bw = new CustomBinaryWriter(ms))
                 {
-                    bw.Write((byte)MessageTypes.IdJoinRequest);
-                    bw.Write(loginData.Username);
+                    bw.Write((byte)RoomMessageTypes.IdJoinRequest);
+                    bw.Write(loginData.Nickname);
+                    bw.Write(consoleID.ToString());
                     bw.Write(MAC);
                     bw.Write((UInt32)netVersion);
                     bw.Write(loginData.Password);
+                    bw.Write("");
                 }
                 System.Diagnostics.Debug.WriteLine(BitConverter.ToString(ms.ToArray()));
                 server.Send(@event.ChannelID, ms.ToArray(), PacketFlags.Reliable);
@@ -155,7 +189,7 @@ namespace CitraRooms.Rooms
             {
                 using (CustomBinaryWriter bw = new CustomBinaryWriter(ms))
                 {
-                    bw.Write((byte)MessageTypes.IdSetGameInfo);
+                    bw.Write((byte)RoomMessageTypes.IdSetGameInfo);
                     bw.Write("Citra Rooms");
                     bw.Write((UInt64)1);
                 }
@@ -182,33 +216,48 @@ namespace CitraRooms.Rooms
                         switch (@event.Type)
                         {
                             case EventType.Receive:
-                                switch ((MessageTypes)@event.Packet.GetBytes()[0])
+                                switch ((RoomMessageTypes)@event.Packet.GetBytes()[0])
                                 {
-                                    case MessageTypes.IdChatMessage:
+                                    case RoomMessageTypes.IdChatMessage:
                                         HandleChatMessage(@event);
                                         break;
-                                    case MessageTypes.IdRoomInformation:
+                                    case RoomMessageTypes.IdStatusMessage:
+                                        HandleStatusMessage(@event);
+                                        break;
+                                    case RoomMessageTypes.IdRoomInformation:
                                         HandleRoomInformation(@event);
                                         break;
-                                    case MessageTypes.IdJoinSuccess:
+                                    case RoomMessageTypes.IdJoinSuccess:
                                         state = State.Joined;
                                         OnConnect(this, null);
                                         break;
-                                    case MessageTypes.IdNameCollision:
+                                    case RoomMessageTypes.IdRoomIsFull:
+                                        state = State.Disconnected;
+                                        throw new RoomListenerException("Room is full.");
+                                    case RoomMessageTypes.IdNameCollision:
                                         state = State.Disconnected;
                                         throw new RoomListenerException("Username already taken. Please change it in settings.");
-                                    case MessageTypes.IdMacCollision:
+                                    case RoomMessageTypes.IdMacCollision:
                                         state = State.Disconnected;
                                         throw new RoomListenerException("Server couldn't assign a valid MAC address.");
-                                    case MessageTypes.IdVersionMismatch:
+                                    case RoomMessageTypes.IdConsoleIdCollision:
+                                        state = State.Disconnected;
+                                        throw new RoomListenerException("Retry a second time.");
+                                    case RoomMessageTypes.IdVersionMismatch:
                                         HandleVersionMismatch(@event);
                                         break;
-                                    case MessageTypes.IdWrongPassword:
+                                    case RoomMessageTypes.IdWrongPassword:
                                         state = State.Disconnected;
                                         throw new RoomListenerException("Wrong password.");
-                                    case MessageTypes.IdCloseRoom:
+                                    case RoomMessageTypes.IdCloseRoom:
                                         state = State.Disconnected;
                                         throw new RoomListenerException("Server closed connection.");
+                                    case RoomMessageTypes.IdHostKicked:
+                                        state = State.Disconnected;
+                                        throw new RoomListenerException("You have been kicked from the room.");
+                                    case RoomMessageTypes.IdHostBanned:
+                                        state = State.Disconnected;
+                                        throw new RoomListenerException("You have been banned from the room.");
                                 }
                                 break;
                             case EventType.Disconnect:
@@ -236,6 +285,23 @@ namespace CitraRooms.Rooms
             }
         }
 
+        private void HandleStatusMessage(Event @event)
+        {
+            StatusMessage mess = new StatusMessage();
+            using (MemoryStream ms = new MemoryStream(@event.Packet.GetBytes()))
+            {
+                ms.Position = 1;
+                using (CustomBinaryReader br = new CustomBinaryReader(ms))
+                {
+                    mess.Type = (StatusMessageTypes)br.ReadByte();
+                    mess.Nickname = br.ReadString();
+                    mess.Username = br.ReadString();
+                    mess.TimeStamp = DateTime.Now;
+                }
+                OnStatusReceived(this, mess);
+            }
+        } 
+
         private void HandleRoomInformation(Event @event)
         {
             Room room = new Room();
@@ -245,19 +311,23 @@ namespace CitraRooms.Rooms
                 {
                     br.ReadBytes(1);
                     room.name = br.ReadString();
+                    room.description = br.ReadString();
                     room.maxPlayers = (int)br.ReadUInt32();
-                    br.ReadString(); // Room UID
                     room.port = br.ReadUInt16();
                     room.preferredGameName = br.ReadString();
+                    room.owner = br.ReadString();
                     room.players = new HashSet<Player>();
                     int len = (int)br.ReadUInt32();
                     for (int i=0; i < len; i++)
                     {
                         Player p = new Player();
-                        p.name = br.ReadString();
+                        p.nickname = br.ReadString();
                         br.ReadBytes(6);
                         p.gameName = br.ReadString();
                         p.gameId = (long)br.ReadInt64();
+                        p.username = br.ReadString();
+                        br.ReadString(); // display_name (???)
+                        p.avatarUrl = br.ReadString();
                         room.players.Add(p);
                     }
                 }
@@ -273,6 +343,7 @@ namespace CitraRooms.Rooms
                 ms.Position = 1;
                 using (CustomBinaryReader br = new CustomBinaryReader(ms))
                 {
+                    mess.Nickname = br.ReadString();
                     mess.Username = br.ReadString();
                     mess.Message = br.ReadString();
                     mess.TimeStamp = DateTime.Now;
@@ -287,7 +358,7 @@ namespace CitraRooms.Rooms
             {
                 using (CustomBinaryWriter bw = new CustomBinaryWriter(ms))
                 {
-                    bw.Write((byte)MessageTypes.IdChatMessage);
+                    bw.Write((byte)RoomMessageTypes.IdChatMessage);
                     bw.Write(message);
                 }
                 server.Send(0, ms.ToArray(), PacketFlags.Reliable);

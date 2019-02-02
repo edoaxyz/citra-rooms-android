@@ -13,7 +13,9 @@ namespace CitraRooms.Main
         public string address { get; set; }
         public int port { get; set; }
         public int netVersion { get; set; }
+        public string externalGuid { get; set; }
         public string name { get; set; }
+        public string description { get; set; }
         public string owner { get; set; }
         public long preferredGameId { get; set; }
         public string preferredGameName { get; set; }
@@ -44,9 +46,11 @@ namespace CitraRooms.Main
 
     public class Player : IEquatable<Player>
     {
+        public string avatarUrl { get; set; }
         public long gameId { get; set; }
         public string gameName { get; set; }
-        public string name { get; set; }
+        public string nickname { get; set; }
+        public string username { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -56,12 +60,12 @@ namespace CitraRooms.Main
         public bool Equals(Player other)
         {
             return other != null &&
-                name == other.name;
+                nickname == other.nickname;
         }
 
         public override int GetHashCode()
         {
-            return 363513814 + EqualityComparer<string>.Default.GetHashCode(name);
+            return 363513814 + EqualityComparer<string>.Default.GetHashCode(nickname);
         }
     }
 
